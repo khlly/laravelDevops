@@ -9,8 +9,8 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-public function up(): void
-{
+    public function up(): void
+    {
     Schema::create('terrains', function (Blueprint $table) {
         $table->id();
         $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
@@ -25,7 +25,7 @@ public function up(): void
         $table->string('main_image')->nullable();
         $table->timestamps();
     });
-}
+    }
 
     /**
      * Reverse the migrations.
